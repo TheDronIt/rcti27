@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	
+	<title>РЦТИ</title>
+	<meta name="description" content="" />
+	<meta name="Keywords" content="" /> 
+	<meta name="robots" content="index, follow" />
+
+	<meta property="og:title" content="" /> 
+	<meta property="og:description" content="" />
+	<meta name="og:locale" content="ru_RU">
+    <meta property="og:image" content="{% static 'web/img/meta-logo.png' %}" />
+
+	<link rel="canonical" href="" />
+	<link rel="shortcut icon" href="{% static 'web/img/favicon.ico' %}" type="image/x-icon">
+	
+	<link rel="stylesheet" href="{% static 'web/include/splide/dist/css/splide.min.css' %}">
+	<script src="{% static 'web/include/splide/dist/js/splide.min.js' %}"></script>
+	<script src="{% static 'web/include/splide/dist/js/splide-auto-scroll.js' %}"></script>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/include.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/mobile.css' %}">
+
+	
+	
+</head>
+<body>
+	{% block content %}
+	{% include 'include/nav.html' %}
+
+	<section class="wrapper">
+		
+		<div class="service-page__container">
+			<div class="service-page_image">
+				<img src="{{Service.Image.url}}" alt=" ">
+			</div>
+			<div>
+				<h1>{{Service.Name}}</h1>
+				{{Service.Description}}
+			</div>
+		</div>
+
+		{% include 'include/feedback.html' %}
+
+	</section>
+
+	{% include 'include/footer.html' %}
+	{% endblock %}
+</body>
+</html>

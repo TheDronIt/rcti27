@@ -1,0 +1,336 @@
+html
+{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body
+{
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat;
+    font-size: 1.6rem;
+    background-color: #F9F9F9;
+}
+img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+h1
+{
+    font-family: Montserrat_bold;
+    font-weight: normal;
+    margin: 0;
+}
+h2
+{
+    font-family: Montserrat_bold;
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+
+.wrapper
+{
+    position: relative;
+    max-width: 1100px;
+    min-height: 98vh;
+    margin: 70px auto;
+    padding: 0 20px;
+}
+
+.page_info
+{
+    margin-bottom: 40px;
+}
+.page_info span
+{
+    font-size: 1.8rem ;
+}
+
+.button
+{
+    font-family: Montserrat_bold;
+    padding: 10px 40px;
+    border-radius: 7px;
+    background-color: #343434;
+    color: white;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.button:hover
+{
+    box-shadow: 0 0 12px 2px gray;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: Montserrat_regular;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: Montserrat_bold;
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: Montserrat_black;
+    src: url(../fonts/Montserrat-Black.ttf);
+}
+
+
+.banner_slider_list
+{
+    max-width: 1200px;
+    height: 320px;
+    background-color: gray;
+}
+.banner_slider
+{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 70px;
+}
+.banner_slide
+{
+    border-radius: 10px;
+    overflow: hidden;
+}
+.banner_slide
+{
+    margin: 0 0px;
+}
+.banner_slide img
+{
+    max-width: 1200px;
+    height: 320px;
+}
+
+
+
+.index-block-el
+{
+    margin: 70px 0px;
+}
+
+.service__container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 220px);
+    grid-column-gap: 60px;
+    grid-row-gap: 40px;
+}
+.service_el
+{
+    display: block;
+    position: relative;
+    border-radius: 7px;
+    overflow: hidden;
+    width: 220px;
+    height: 220px;
+    box-shadow: 0 0 10px 2px lightgray;
+}
+
+.service_el span
+{
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    color: white;
+    text-align: center;
+    background-color: rgba(52, 52, 52, 0.9);
+    margin: 0 15px 15px 15px;   
+    border-radius: 7px;
+    padding: 8px;
+}
+
+
+.news__container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 500px);
+    grid-column-gap: 100px;
+    grid-row-gap: 40px;
+}
+.news_el
+{
+    display: block;
+    position: relative;
+    border-radius: 7px;
+    overflow: hidden;
+    width: 500px;
+    height: 280px;
+    box-shadow: 0 0 10px 2px lightgray;
+}
+.news_text
+{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    color: white;
+    text-align: left;
+    font-size: 1.4rem;
+    background-color: rgba(52, 52, 52, 0.9);
+    margin: 0 15px 15px 15px;   
+    border-radius: 7px;
+    padding: 10px 15px;
+    max-width: 320px;
+}
+.news_text b
+{
+    font-size: 1.6rem;
+}
+.news_data
+{
+    position: absolute;
+    font-family: Montserrat_regular;
+    bottom: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    background-color: rgba(52, 52, 52, 0.9);
+    margin: 0 10px 15px 0px;   
+    border-radius: 7px;
+    padding: 4px 8px;
+}
+
+
+.contacts__container
+{
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-column-gap: 60px;
+}
+.contacts_info div
+{
+    margin-bottom: 13px;
+}
+.contacts_map
+{
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 0 10px 2px lightgray;
+}
+
+
+.contacts_form
+{
+    box-shadow: 0 0 10px 2px lightgray;
+    padding: 40px;
+    margin: 30px auto 0 auto;
+    border-radius: 7px;
+    max-width: 280px;
+    background-color: white;
+}
+.contacts_form input, textarea
+{
+    width: 100%;
+    border: none;
+    border-bottom: 2.5px solid black;
+    margin-bottom: 15px;
+}
+.contacts_form_button
+{
+    margin-top: 40px;
+}
+ul li
+{
+    margin-bottom: 12px;
+}
+
+.sert__container
+{
+    margin: 60px 0;
+}
+.sert__block
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 220px);
+    grid-column-gap: 60px;
+}
+.sert_el
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: 220px;
+    height: 220px;
+    background-color: white;
+    box-shadow: 0 0 10px 2px lightgray;
+    border-radius: 7px;
+    overflow: hidden;
+    transition-duration: 0.3s;
+}
+.sert_el div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Montserrat_bold;
+}
+.sert_el:hover
+{
+    text-decoration: underline;
+    box-shadow: 0 0 12px 2px gray;
+}
+.sert_el div img
+{
+    width: 65px;
+    height: 65px;
+}
+
+
+.about-images__container
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+.about-images__container img
+{
+    border-radius: 7px;
+    margin: 50px 0px;
+    box-shadow: 0 0 10px 2px lightgray;
+    width: 500px;
+    height: 280px;
+}
+
+.service-page__container
+{
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-column-gap: 50px;
+}
+.service-page__container img
+{
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.news-page_image
+{
+    max-width: 500px;
+    border-radius: 7px;
+    overflow: hidden;
+    margin: auto;
+}
+.news-page__container
+{
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-column-gap: 50px;
+}
+.news-page_text
+{
+    margin-top: 100px;
+}

@@ -1,0 +1,14 @@
+<div class="index-block-el">
+	<h2>Задать вопрос</h2>
+	Остались вопросы?<br>Расскажите нам о задаче и мы ответим вам
+
+	<form method="POST" class="contacts_form">
+		{% csrf_token %}
+		<input type="input" name="Name" placeholder="Имя" class="contacts_form_el">
+		<input type="input" name="Email" placeholder="Email" class="contacts_form_el">
+		<input type="input" name="Phone" placeholder="Телефон" class="contacts_form_el">
+		<textarea name="Text" placeholder="Сообщение" class="contacts_form_el"></textarea>
+		<input type="submit" name="button" value="Отправить" class="contacts_form_button button">
+	</form>
+
+</div>

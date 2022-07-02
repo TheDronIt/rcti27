@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	
+	<title>РЦТИ</title>
+	<meta name="description" content="" />
+	<meta name="Keywords" content="" /> 
+	<meta name="robots" content="index, follow" />
+
+	<meta property="og:title" content="" /> 
+	<meta property="og:description" content="" />
+	<meta name="og:locale" content="ru_RU">
+    <meta property="og:image" content="{% static 'web/img/meta-logo.png' %}" />
+
+	<link rel="canonical" href="" />
+	<link rel="shortcut icon" href="{% static 'web/img/favicon.ico' %}" type="image/x-icon">
+	
+	<link rel="stylesheet" href="{% static 'web/include/splide/dist/css/splide.min.css' %}">
+	<script src="{% static 'web/include/splide/dist/js/splide.min.js' %}"></script>
+	<script src="{% static 'web/include/splide/dist/js/splide-auto-scroll.js' %}"></script>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/include.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/mobile.css' %}">
+
+	
+	
+</head>
+<body>
+	{% block content %}
+	{% include 'include/nav.html' %}
+
+	<section class="wrapper">
+
+		{% if Banners %}
+		<div class="banner_slider">
+			<div class="splide__track">
+				<ul class="splide__list banner_slider_list">
+					{% for Banner in Banners %}
+					<a class="splide__slide banner_slide" href="{{Banner.Link}}">
+						<img src="{{Banner.Image.url}}" alt=" ">
+					</a>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		{% endif %}
+
+		<div class="index-block-el" id="service">
+			<h2>Услуги</h2>
+			<div class="service__container">
+				{% for Service in Services %}
+					<a href="/service/{{Service.id}}" class="service_el">
+						<img src="{{Service.Image.url}}">
+						<span>{{Service.Name}}</span>
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+
+
+		<div class="index-block-el">
+			<h2>Последние новости</h2>
+			<div class="news__container">
+				{% for News in News %}
+					<a href="/news/{{News.id}}" class="news_el">
+						<img src="{{News.Image.url}}">
+						<span class="news_text">
+							<b>{{News.Title}}</b><br>
+							{{News.About}}
+						</span>
+						<span class="news_data">
+							{{News.Date}}
+						</span>
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+
+
+		<div class="index-block-el" id="contacts">
+			<h2>Контакты</h2>
+			<div class="contacts__container">
+				<div class="contacts_info">
+					<div>
+						<b>Адрес</b><br>
+						г. Хабаровск, ул. Амурский бульвар,<br>д. 43, 2 этаж
+					</div>
+					<div>
+						<b>График работы</b><br>
+						Пн - Пт:  09:00 - 19:00
+					</div>
+					<div>
+						<b>Телефон</b><br>
+						+7 (4212) 905-095
+					</div>
+					<div>
+						<b>Почта</b><br>
+						rcti.khv@gmail.com
+					</div>
+					<div>
+						<b>Реквизиты</b><br>
+						{{Requisites.File.url}}
+						{% for Requisites in Requisites %}
+						<a href="{{Requisites.File.url}}">Скачать</a>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="contacts_map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2644.277394471588!2d135.06521471610623!3d48.48957257925307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5efaea1f12963d41%3A0xed724e81966782ea!2z0KDQptCi0JggLSDQkdCi0Jgg0KXQsNCx0LDRgNC-0LLRgdC6LCDQutCw0LTQsNGB0YLRgNC-0LLQsNGPINC60L7QvNC_0LDQvdC40Y8g0YPRgdC70YPQs9C4INC40L3QttC10L3QtdGALCDQvNC10LbQtdCy0LDQvdC40LUsINGB0L7Qs9C70LDRgdC-0LLQsNC90LjQtSDQv9C10YDQtdC_0LvQsNC90LjRgNC-0LLQutC4LCDQs9C10L7QtNC10LfQuNGB0YI!5e0!3m2!1sru!2sru!4v1656573621298!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</div>
+		</div>
+
+
+		{% include 'include/feedback.html' %}
+
+	</section>
+
+
+
+	{% include 'include/footer.html' %}
+	{% endblock %}
+
+	<script type="text/javascript">
+
+		var banner_splide = new Splide( '.banner_slider', {
+			type   : 'loop',
+			focus  : 'center',
+			autoScroll: {
+				speed: 2,
+			},
+		});
+		banner_splide.mount();
+
+	</script>
+
+</body>
+</html>
