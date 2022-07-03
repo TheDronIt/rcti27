@@ -28,13 +28,13 @@
 		margin-bottom: 5px;
 	}
 
-	.banner_slide img, .banner_slider_list, .about-images__container img
+	.banner_slide img, .banner_slider_list, .about-images__container img, .contacts_map
 	{
 		max-width: 350px;
 		height: 196px;
 	}
 
-	.service-page__container, .news-page__container
+	.service-page__container, .news-page__container, .contacts__container
 	{
 		grid-template-columns: 1fr;
 		grid-row-gap: 20px;
