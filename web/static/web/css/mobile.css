@@ -2,7 +2,7 @@
 
 	.service__container, .sert__block {
 		grid-template-columns: repeat(auto-fit, 160px);
-		grid-column-gap: 20px;
+		grid-column-gap: 15px;
 		justify-content: center;
 	}
 	.service_el {
@@ -30,7 +30,7 @@
 
 	.banner_slide img, .banner_slider_list, .about-images__container img, .contacts_map
 	{
-		max-width: 350px;
+		max-width: 450px;
 		height: 196px;
 	}
 
@@ -59,5 +59,27 @@
 	.sert_el div img {
     	width: 45px;
     	height: 45px;
+	}
+
+	.mobile_info
+	{
+		display: grid;
+		justify-content: center;
+		grid-row-gap: 10px;
+		margin: 0 auto 30px auto;
+		max-width: 200px;
+	}
+	.mobile_info_logo
+	{
+		display: grid;
+		grid-template-columns: 40px 1fr;
+		grid-column-gap: 10px;
+		font-family: Montserrat_bold !important;
+	}
+	.mobile_info a, .mobile_info span
+	{
+		text-align: center;
+		font-family: Montserrat;
+		font-size: 1.5rem;
 	}
 }

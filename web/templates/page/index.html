@@ -7,17 +7,17 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	
 	<title>РЦТИ</title>
-	<meta name="description" content="" />
-	<meta name="Keywords" content="" /> 
+	<meta name="description" content="Региональный Центр Технической Инвентаризации - компания предоставляющая весь спектр услуг связанного с оборотом недвижимого имущества" />
+	<meta name="Keywords" content="РЦТИ, Региональный Центр Технической Инвентаризации, Хабаровскб, геодезист" /> 
 	<meta name="robots" content="index, follow" />
 
-	<meta property="og:title" content="" /> 
-	<meta property="og:description" content="" />
+	<meta property="og:title" content="РЦТИ" /> 
+	<meta property="og:description" content="Региональный Центр Технической Инвентаризации - компания предоставляющая весь спектр услуг связанного с оборотом недвижимого имущества" />
 	<meta name="og:locale" content="ru_RU">
     <meta property="og:image" content="{% static 'web/img/meta-logo.png' %}" />
 
-	<link rel="canonical" href="" />
-	<link rel="shortcut icon" href="{% static 'web/img/favicon.ico' %}" type="image/x-icon">
+	<link rel="canonical" href="https://rcti27.ru" />
+	<link rel="shortcut icon" href="{% static 'web/img/logo.jpg' %}" type="image/x-icon">
 	
 	<link rel="stylesheet" href="{% static 'web/include/splide/dist/css/splide.min.css' %}">
 	<script src="{% static 'web/include/splide/dist/js/splide.min.js' %}"></script>
@@ -35,6 +35,21 @@
 	{% include 'include/nav.html' %}
 
 	<section class="wrapper">
+
+		<div class="mobile_info">
+			<div class="mobile_info_logo">
+				<img src="{% static 'web/img/logo.jpg' %}">
+				<span>
+					Региональный<br>
+					Центр<br>
+					Технической<br>
+					Инвентаризации
+				</span>
+			</div>
+			<a href="905095">+7 (4212) 905-095</a>
+			<span>г. Хабаровск, Амурский бульвар д.43, 2 этаж</span>
+			<span>rcti.khv@gmail.com</span>
+		</div>
 
 		{% if Banners %}
 		<div class="banner_slider">
@@ -81,7 +96,14 @@
 			</div>
 		</div>
 
+		
 
+	</section>
+	
+
+
+		
+	<div class="index-contact__container">
 		<div class="index-block-el" id="contacts">
 			<h2>Контакты</h2>
 			<div class="contacts__container">
@@ -111,18 +133,14 @@
 					</div>
 				</div>
 				<div class="contacts_map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2644.277394471588!2d135.06521471610623!3d48.48957257925307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5efaea1f12963d41%3A0xed724e81966782ea!2z0KDQptCi0JggLSDQkdCi0Jgg0KXQsNCx0LDRgNC-0LLRgdC6LCDQutCw0LTQsNGB0YLRgNC-0LLQsNGPINC60L7QvNC_0LDQvdC40Y8g0YPRgdC70YPQs9C4INC40L3QttC10L3QtdGALCDQvNC10LbQtdCy0LDQvdC40LUsINGB0L7Qs9C70LDRgdC-0LLQsNC90LjQtSDQv9C10YDQtdC_0LvQsNC90LjRgNC-0LLQutC4LCDQs9C10L7QtNC10LfQuNGB0YI!5e0!3m2!1sru!2sru!4v1656573621298!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1bbda429ac2bd370a7d8c0992930f02d98a8f989f525bd296264312c99c24173&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
 				</div>
 			</div>
 		</div>
-
-
+	</div>
+	<div class="index-feedback">
 		{% include 'include/feedback.html' %}
-
-	</section>
-
-
-
+	</div>
 
 	{% include 'include/footer.html' %}
 	{% endblock %}

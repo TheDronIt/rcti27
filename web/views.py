@@ -11,9 +11,9 @@ now = datetime.datetime.now()
 def index__page(request):
 	savefeedback(request)
 	data = {
-		'Banners': 		Banner.objects.all(),
-		'Services': 	Service.objects.filter(Show="Отображать"),
-		'News':			News.objects.all()[:2],
+		'Banners': 		Banner.objects.all().order_by('-id'),
+		'Services': 	Service.objects.filter(Show="Отображать").order_by('id'),
+		'News':			News.objects.all().order_by('-id')[:2],
 		'Requisites':	Requisites.objects.all()[:1],
 	}
 	return render(request, 'page/index.html', data)

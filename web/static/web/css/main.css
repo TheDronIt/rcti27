@@ -122,12 +122,17 @@ h2
     margin: 70px 0px;
 }
 
+.service-page_image
+{
+    max-height: 281px;
+}
 .service__container
 {
     display: grid;
     grid-template-columns: repeat(auto-fit, 220px);
-    grid-column-gap: 60px;
+    grid-column-gap: 30px;
     grid-row-gap: 40px;
+    justify-content: space-between;
 }
 .service_el
 {
@@ -333,4 +338,26 @@ ul li
 .news-page_text
 {
     margin-top: 100px;
+}
+.index-contact__container
+{
+    max-width: 100%;
+    overflow: hidden;
+    padding: 40px 0;
+    background-image: url(../img/contacts.webp);
+    background-size: cover;
+    background-position: center;
+}
+.contacts_info
+{
+    background-color: rgba(204, 204, 204, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+
+}
+#contacts, .index-feedback
+{
+    max-width: 1100px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
 }
