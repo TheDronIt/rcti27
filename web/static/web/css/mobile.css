@@ -10,7 +10,7 @@
 		height: 160px;
 	}
 	.service_el span {
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 		margin: 0 10px 10px 10px;
 	}
 	.news__container{
@@ -81,5 +81,9 @@
 		text-align: center;
 		font-family: Montserrat;
 		font-size: 1.5rem;
+	}
+	.mobile_info span
+	{
+		text-align: left;
 	}
 }
